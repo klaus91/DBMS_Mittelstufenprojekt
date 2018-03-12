@@ -24,3 +24,6 @@ int main(int argc, char *argv[])
 //    delete csvP;
     return a.exec();
 }
+
+
+// Hier ein Kommentar
