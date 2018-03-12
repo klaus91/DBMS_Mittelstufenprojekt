@@ -1,48 +1,60 @@
 #include "csvparsen.h"
-#include <istream>
-#include <QFile>
-
 
 CsvParsen::CsvParsen()
 {
 }
 
-void CsvParsen::leseDatei(QFile *file)
+void CsvParsen::leseDatei(QFile &file)
 {
-    qDebug() << "Hallo";
+    qDebug() << "leseDatei called";
+
+    QTextStream in(&file);
+
+    QList<QStringList> lines;
+
+    while (!in.atEnd())
+    {
+        QString line = in.readLine();
+        if (line.contains(";"))             // TODO mit ; getrennte Elemente trennen und in String[][] Schreiben ?!
+        {
+            QStringList columns(line.split(";",QString::SkipEmptyParts));
+            lines.append(columns);
+
+            qDebug() << "lines.count() = " << lines.count();
+
+//----------- >> Kein funktioneller Code ab hier -----------------------------
+
+            qDebug() << "columns = " << columns;
+            qDebug() << "columns[0] = " << columns[0];
+
+            qDebug() << "columns.count() = " << columns.count();
+        }
+    }
 }
 
 void CsvParsen::schreibeDatei()
 {
 }
 
-//bool CsvParsen::oeffneDatei(std::string dateiPfad)
-//{
-//    qDebug() << "Hallo";
-//    std::fstream *fs = new std::fstream();
-//    fs->open(dateiPfad, std::fstream::in);//std::ios_base::in);
-//    if (fs->is_open())
-//    {
-//        leseDatei(fs);
-//        qDebug() << "yes";
-//    }
-
-//    fs->close();
-//}
-
-bool CsvParsen::oeffneDatei(std::string dateiPfad)
+bool CsvParsen::oeffneDatei(QString dateiPfad)
 {
-    QFile *file("C:/Users/folke/OneDrive/Documents/Versetzungsplan.csv");
+    QFile file(dateiPfad);
 
-    if(file->open(stderr, QIODevice::ReadOnly))
+    if(file.open(QIODevice::ReadOnly))
     {
-        qDebug() << "yes";
+        qDebug() << "Success: File opened!";
         leseDatei(file);
     }
-
-    file->close();
+    else
+    {
+        qDebug() << "Error: File not found!";
+        return false;
+    }
+    file.close();
+    return true;
 }
 
 bool CsvParsen::schliesseDatei()
 {
+    return true;
 }

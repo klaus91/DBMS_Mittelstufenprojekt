@@ -4,6 +4,8 @@
 #include <QFileSystemModel>
 #include <QDirModel>
 #include <QDebug>
+#include <QString>
+#include <QStandardItemModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -33,4 +35,14 @@ void MainWindow::showDirectory()
     model->setReadOnly(true);
 
     ui->myTreeView->setModel(model);
+}
+
+/******************************************************************************
+ * Funktion zum Anzeigen des Inhalts einer Datei im TableView
+ ******************************************************************************/
+void MainWindow::showTable()
+{
+//    QAbstractTableModel *model = new QAbstractTableModel;
+    QStandardItemModel *model = new QStandardItemModel;
+
 }
