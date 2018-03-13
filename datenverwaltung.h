@@ -2,6 +2,8 @@
 #define DATENVERWALTUNG_H
 
 #include <QMainWindow>
+#include <QDebug>
+
 
 class Datenverwaltung : public QMainWindow
 {
@@ -10,7 +12,6 @@ public:
     explicit Datenverwaltung(QWidget *parent = nullptr);
 
     void eintragErstellen();
-    void eintragSuchen();
     void eintragEntfernen();
     void eintragSortieren();
     void tabelleAnlegen();
@@ -20,6 +21,13 @@ public:
 signals:
 
 public slots:
+
+    void eintragSuchen();
+
+protected:
+
+private:
+
 };
 
 #endif // DATENVERWALTUNG_H

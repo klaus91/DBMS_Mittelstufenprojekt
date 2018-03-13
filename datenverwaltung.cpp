@@ -5,37 +5,38 @@ Datenverwaltung::Datenverwaltung(QWidget *parent) : QMainWindow(parent)
 
 }
 
-void eintragErstellen()
+void Datenverwaltung::eintragErstellen()
 {
 
 }
 
-void eintragSuchen()
+// Suche in Datenverwaltung sinnvoll? Wie inhalt von treeview an datenverwaltung?
+void Datenverwaltung::eintragSuchen()
+{
+    qDebug() << "Suche clicked!";
+}
+
+void Datenverwaltung::eintragEntfernen()
 {
 
 }
 
-void eintragEntfernen()
+void Datenverwaltung::eintragSortieren()
 {
 
 }
 
-void eintragSortieren()
+void Datenverwaltung::tabelleAnlegen()
 {
 
 }
 
-void tabelleAnlegen()
+void Datenverwaltung::eintragEditieren()
 {
 
 }
 
-void eintragEditieren()
-{
-
-}
-
-void fehlerHandhabung()
+void Datenverwaltung::fehlerHandhabung()
 {
 
 }

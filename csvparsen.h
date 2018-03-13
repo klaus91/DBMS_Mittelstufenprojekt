@@ -15,7 +15,6 @@ public:
     virtual void leseDatei(QFile & file);
     virtual void schreibeDatei();
 
-
 };
 
 #endif // CSVPARSEN_H

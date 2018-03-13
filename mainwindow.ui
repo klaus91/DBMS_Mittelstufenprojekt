@@ -36,7 +36,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="sucheLineEdit">
           <property name="enabled">
            <bool>true</bool>
           </property>
@@ -49,7 +49,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="sucheButton">
           <property name="text">
            <string>Suchen</string>
           </property>

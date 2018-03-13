@@ -11,21 +11,15 @@ int main(int argc, char *argv[])
     w.show();
     w.showDirectory();
 
-//    QString dateiPfad = "F:\\programming\\test.csv";
-//    QString dateiPfad = "C:\\Users\\folke\\OneDrive\\Documents\\DBMS_cutlinetest.csv";
 
-//    QString dateiPfad = "C:\\Users\\folke\\OneDrive\\Documents\\DBMS_cutline\\test.csv";
-    QString dateiPfad = "C:\\Users\\folke\\OneDrive\\Documents\\Versetzungsplan.csv";
+//    QString dateiPfad = "F:\\programming\\test.csv";                                      // Jared Pfad
 
-//    QString dateiPfad = "C://Users//folke//OneDrive//Documents//DBMS_cutlinetest//test.csv";
-
+//    QString dateiPfad = "C:\\Users\\folke\\OneDrive\\Documents\\Versetzungsplan.csv";     // Klaus Pfad
 
     CsvParsen *csvP = new CsvParsen();
-//    csvP->oeffneDatei("C:\\Users\\folke\\OneDrive\\Documents\\Versetzungsplan.csv");
     csvP->oeffneDatei(dateiPfad);
-//    Parser p = new Parser();
-//    p.leseDatei();
 
 //    delete csvP;
+
     return a.exec();
 }

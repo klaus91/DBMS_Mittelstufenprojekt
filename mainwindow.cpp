@@ -7,11 +7,15 @@
 #include <QString>
 #include <QStandardItemModel>
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    m_datenverwaltung = new Datenverwaltung();
+
+    connect(ui->sucheButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(eintragSuchen()));
 }
 
 MainWindow::~MainWindow()

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "datenverwaltung.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -18,9 +20,11 @@ public:
 
     ~MainWindow();
 
+protected:
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow      *ui;
+    Datenverwaltung     *m_datenverwaltung;
 };
 
 #endif // MAINWINDOW_H

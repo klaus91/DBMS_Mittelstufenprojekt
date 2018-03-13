@@ -15,7 +15,7 @@ void CsvParsen::leseDatei(QFile &file)
     while (!in.atEnd())
     {
         QString line = in.readLine();
-        if (line.contains(";"))             // TODO mit ; getrennte Elemente trennen und in String[][] Schreiben ?!
+        if (line.contains(";"))
         {
             QStringList columns(line.split(";",QString::SkipEmptyParts));
             lines.append(columns);
