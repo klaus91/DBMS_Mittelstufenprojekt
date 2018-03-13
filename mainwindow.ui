@@ -80,14 +80,14 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="neueTabelleButton">
           <property name="text">
            <string>Neue Tabelle</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="loescheTabelleButton">
           <property name="text">
            <string>Tabelle löschen</string>
           </property>
@@ -116,28 +116,28 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="neueZeileButton">
             <property name="text">
              <string>Neue Zeile</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="neueSpalteButton">
             <property name="text">
              <string>Neue Spalte</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="loescheZeileButton">
             <property name="text">
              <string>Zeile löschen</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="loescheSpalteButton">
             <property name="text">
              <string>Spalte löschen</string>
             </property>
@@ -157,7 +157,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_8">
+           <widget class="QPushButton" name="exportiereTabelleButton">
             <property name="text">
              <string>Tabelle Exportieren</string>
             </property>

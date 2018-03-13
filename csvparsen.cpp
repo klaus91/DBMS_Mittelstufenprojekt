@@ -34,6 +34,7 @@ void CsvParsen::leseDatei(QFile &file)
 
 void CsvParsen::schreibeDatei()
 {
+
 }
 
 bool CsvParsen::oeffneDatei(QString dateiPfad)

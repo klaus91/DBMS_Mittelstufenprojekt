@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "datenverwaltung.h"
+#include "exportdialog.h"
 
 
 namespace Ui {
@@ -25,6 +26,7 @@ protected:
 private:
     Ui::MainWindow      *ui;
     Datenverwaltung     *m_datenverwaltung;
+    ExportDialog        *m_exportDialog;
 };
 
 #endif // MAINWINDOW_H

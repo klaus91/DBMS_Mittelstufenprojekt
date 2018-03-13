@@ -2,8 +2,6 @@
 #define CSVPARSEN_H
 
 #include <parser.h>
-#include <QDebug>
-#include <fstream>
 
 
 class CsvParsen : public Parser

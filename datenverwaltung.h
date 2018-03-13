@@ -11,10 +11,9 @@ class Datenverwaltung : public QMainWindow
 public:
     explicit Datenverwaltung(QWidget *parent = nullptr);
 
-    void eintragErstellen();
+    void eintragErstellen();       // sind diese methoden nötig?
     void eintragEntfernen();
     void eintragSortieren();
-    void tabelleAnlegen();
     void eintragEditieren();
     void fehlerHandhabung();
 
@@ -23,6 +22,13 @@ signals:
 public slots:
 
     void eintragSuchen();
+    void tabelleAnlegen();
+    void tabelleLoeschen();
+    void zeileAnlegen();
+    void spalteAnlegen();
+    void zeileLoeschen();
+    void spalteLoeschen();
+
 
 protected:
 

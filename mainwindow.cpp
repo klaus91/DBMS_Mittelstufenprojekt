@@ -14,8 +14,16 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     m_datenverwaltung = new Datenverwaltung();
+    m_exportDialog = new ExportDialog();
 
     connect(ui->sucheButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(eintragSuchen()));
+    connect(ui->neueTabelleButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(tabelleAnlegen()));
+    connect(ui->loescheTabelleButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(tabelleLoeschen()));
+    connect(ui->neueZeileButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(zeileAnlegen()));
+    connect(ui->neueSpalteButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(spalteAnlegen()));
+    connect(ui->loescheZeileButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(zeileLoeschen()));
+    connect(ui->loescheSpalteButton, SIGNAL(clicked()), m_datenverwaltung, SLOT(spalteLoeschen()));
+    connect(ui->exportiereTabelleButton,SIGNAL(clicked()), m_exportDialog, SLOT(showExportDialog()));
 }
 
 MainWindow::~MainWindow()

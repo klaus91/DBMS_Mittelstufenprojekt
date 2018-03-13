@@ -1,13 +1,10 @@
 #ifndef PARSER_H
 #define PARSER_H
 
-#include <iostream>
-#include <fstream>
-#include <iostream>
-#include <stdio.h>
 #include <QFile>
 #include <QString>
 #include <QTextStream>
+#include <QDebug>
 
 
 class Parser

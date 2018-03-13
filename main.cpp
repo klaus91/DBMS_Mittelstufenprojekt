@@ -1,8 +1,8 @@
 #include "mainwindow.h"
 #include <QApplication>
-
 #include "parser.h"
 #include "csvparsen.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     w.showDirectory();
 
 
-//    QString dateiPfad = "F:\\programming\\test.csv";                                      // Jared Pfad
+   QString dateiPfad = "F:\\programming\\test.csv";                                      // Jared Pfad
 
 //    QString dateiPfad = "C:\\Users\\folke\\OneDrive\\Documents\\Versetzungsplan.csv";     // Klaus Pfad
 
