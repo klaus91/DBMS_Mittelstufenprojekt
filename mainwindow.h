@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-<<<<<<< .mine
 #include "ui_mainwindow.h"
 #include <QTreeView>
 #include <QFileSystemModel>
@@ -11,11 +10,9 @@
 #include <QString>
 #include <QStandardItemModel>
 #include "csvparsen.h"
-||||||| .r5
-=======
 #include "datenverwaltung.h"
 #include "exportdialog.h"
->>>>>>> .r7
+
 
 
 namespace Ui {
