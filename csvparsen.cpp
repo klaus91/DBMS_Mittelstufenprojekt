@@ -15,21 +15,20 @@ void CsvParsen::leseDatei(QFile &file)
     while (!in.atEnd())
     {
         QString line = in.readLine();
-        if (line.contains(";"))
+
+        if (line.contains(";"))             // TODO mit ; getrennte Elemente trennen und in String[][] Schreiben ?!
         {
-            QStringList columns(line.split(";",QString::SkipEmptyParts));
+            QStringList columns(line.split(";", QString::SkipEmptyParts));
             lines.append(columns);
 
             qDebug() << "lines.count() = " << lines.count();
-
-//----------- >> Kein funktioneller Code ab hier -----------------------------
-
             qDebug() << "columns = " << columns;
             qDebug() << "columns[0] = " << columns[0];
-
             qDebug() << "columns.count() = " << columns.count();
         }
     }
+
+    CsvParsen::m_table = lines;
 }
 
 void CsvParsen::schreibeDatei()
