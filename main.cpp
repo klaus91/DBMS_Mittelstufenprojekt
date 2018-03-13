@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     w.showDirectory();
+    w.showTable();
 
 
    QString dateiPfad = "F:\\programming\\test.csv";                                      // Jared Pfad

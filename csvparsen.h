@@ -7,10 +7,12 @@
 class CsvParsen : public Parser
 {
 public:
+    QList<QStringList> m_table;
+
     CsvParsen();
     virtual bool schliesseDatei();
     virtual bool oeffneDatei(QString dateiPfad);
-    virtual void leseDatei(QFile & file);
+    virtual void leseDatei(QFile &file);
     virtual void schreibeDatei();
 
 };

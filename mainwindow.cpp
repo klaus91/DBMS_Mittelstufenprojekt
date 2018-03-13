@@ -1,11 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <QTreeView>
-#include <QFileSystemModel>
-#include <QDirModel>
-#include <QDebug>
-#include <QString>
-#include <QStandardItemModel>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -54,7 +47,36 @@ void MainWindow::showDirectory()
  ******************************************************************************/
 void MainWindow::showTable()
 {
-//    QAbstractTableModel *model = new QAbstractTableModel;
-    QStandardItemModel *model = new QStandardItemModel;
 
+/*
+ * Hier handelt es sich um einen Versuch auf die QList zuzugreifen, die die
+ * Zeilen der eingelesenen CSV-Datei enthält.
+ */
+
+/******************************************************************************
+
+    QList<QStringList> CsvParsen::*pLines = &CsvParsen::m_table;
+
+//    CsvParsen::m_table
+
+    qDebug() << "pLines = " << pLines;
+
+    qDebug() << CsvParsen::m_table.count();
+
+    for (int i = 0; i <= 5; ++i)
+    {
+        qDebug << CsvParsen::m_table[i];
+    }
+
+    const int l = CsvParsen::m_table.count();
+    qDebug() << "m_table.count() = " << l;
+
+******************************************************************************/
+    QStandardItemModel *model = new QStandardItemModel(2, 3, this);
+
+    model->setHorizontalHeaderItem(0, new QStandardItem(QString("Column1 Header")));
+    model->setHorizontalHeaderItem(1, new QStandardItem(QString("Column2 Header")));
+    model->setHorizontalHeaderItem(2, new QStandardItem(QString("Column3 Header")));
+
+    ui->myTableView->setModel(model);
 }
